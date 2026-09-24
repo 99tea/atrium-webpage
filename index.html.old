@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Atrium Chat | Plataforma de Atendimento Multicanal e Gestão de SLA</title>
+  <meta name="description" content="Centralize seu atendimento com o Atrium Chat e controle o SLA da sua equipe em tempo real com o Atrium Monitor.">
+  <meta name="keywords" content="atendimento omnichannel, controle de SLA, gestão de atendimento, chatwoot, whatsapp corporativo, atrium desk, atrium chat, atrium monitor">
+  <meta name="author" content="Atrium Chat">
+  <meta name="robots" content="index, follow">
+
+  <link rel="icon" href="img/dark_logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,500&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header id="main-header">
+    <div class="header-container">
+      <a href="#hero" class="logo-link">
+        <img src="img/dark_logo.png" alt="Logo Atrium Desk" class="logo-img">
+        <span class="logo-text">Atrium <strong>Chat</strong></span>
+      </a>
+
+      <nav class="main-nav">
+        <a href="#hero">Início</a>
+        <a href="#atrium-chat">Atrium Chat</a>
+        <a href="#atrium-monitor">Atrium Monitor</a>
+        <a href="#planos">Planos</a>
+      </nav>
+
+      <a href="#agendar" class="btn-primary header-cta"><span>Agendar Demo</span></a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="hero" class="hero-section">
+      <div class="hero-bg-glow" id="heroGlow"></div>
+      <div class="hero-container">
+        <div class="hero-content fade-in-up">
+          <h1>O controle absoluto<br>da sua <em>operação</em>.</h1>
+          <p>Centralize seu atendimento com IA nativa, monitore SLAs em tempo real e escale seus resultados com o pacote Atrium Desk.</p>
+          <div class="hero-actions">
+            <a href="#agendar" class="btn-primary"><span>Agendar Demonstração</span></a>
+            <a href="#atrium-chat" class="btn-secondary"><span>Ver Funcionalidades</span></a>
+          </div>
+          <div class="hero-perks">
+            <span><i class="bi bi-lightning-charge-fill"></i> Setup em 48h</span>
+            <span><i class="bi bi-robot"></i> Inteligência artificial nativa</span>
+            <span><i class="bi bi-graph-up"></i> SLA monitorado em tempo real</span>
+          </div>
+        </div>
+
+        <div class="hero-visual fade-in-up">
+          <div class="hero-image-wrapper">
+            <img src="img/monitor-3.png" alt="Dashboard Atrium Monitor" class="hero-img">
+            <div class="img-glow"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ATRIUM CHAT -->
+    <section id="atrium-chat" class="modern-showcase-section">
+      <div class="showcase-container fade-in-up">
+        <div class="section-header">
+          <span class="eyebrow">Nível 01 — Operação</span>
+          <h2>Atrium Chat</h2>
+          <p>Caixa de entrada omnichannel self-hosted com automações e IA para revolucionar a produtividade do seu time.</p>
+        </div>
+
+        <div class="interactive-showcase">
+          <div class="showcase-nav">
+            <div class="showcase-tab active" data-img="chat-img-1" tabindex="0" role="button" aria-pressed="true">
+              <h3>Omnichannel &amp; Copiloto IA</h3>
+              <p>Caixa unificada com e-mail, WhatsApp e redes sociais. Atribuição automática, respostas rápidas e IA que resume históricos imensos e ajusta o tom das respostas.</p>
+            </div>
+            <div class="showcase-tab" data-img="chat-img-2" tabindex="0" role="button" aria-pressed="false">
+              <h3>Gestão visual com etiquetas Kanban</h3>
+              <p>Organize sua operação visualmente. Crie etiquetas personalizadas para status como pendente, em andamento ou aguardando cliente.</p>
+            </div>
+            <div class="showcase-tab" data-img="chat-img-3" tabindex="0" role="button" aria-pressed="false">
+              <h3>Central de ajuda e FAQ</h3>
+              <p>Reduza chamados repetitivos. Crie um portal de autoatendimento para clientes e uma base de conhecimento interna rica em tutoriais para a equipe.</p>
+            </div>
+          </div>
+          <div class="showcase-display">
+            <img src="img/chat-1.png" id="chat-img-1" class="showcase-large-img active" alt="Omnichannel e IA">
+            <img src="img/chat-3.png" id="chat-img-2" class="showcase-large-img" alt="Etiquetas Kanban">
+            <img src="img/chat-2.png" id="chat-img-3" class="showcase-large-img" alt="Central de Ajuda e FAQ">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ATRIUM MONITOR -->
+    <section id="atrium-monitor" class="modern-showcase-section bg-darker">
+      <div class="showcase-container fade-in-up">
+        <div class="section-header">
+          <span class="eyebrow">Nível 02 — Visão geral</span>
+          <h2>Atrium Monitor</h2>
+          <p>Não espere o cliente reclamar. Monitore tendências, SLAs e gargalos da sua operação em tempo real.</p>
+        </div>
+
+        <div class="interactive-showcase reverse">
+          <div class="showcase-nav">
+            <div class="showcase-tab active" data-img="mon-img-1" tabindex="0" role="button" aria-pressed="true">
+              <h3>Visão geral e tendências</h3>
+              <p>Acompanhe o volume e a tendência de aberturas de chamados. Saiba exatamente os horários de pico e o status geral da operação.</p>
+            </div>
+            <div class="showcase-tab" data-img="mon-img-2" tabindex="0" role="button" aria-pressed="false">
+              <h3>Controle de SLA implacável</h3>
+              <p>Acompanhe metas de 1ª resposta e resolução. Monitore o cumprimento de SLA segmentado por prioridade, canal de origem e departamento.</p>
+            </div>
+            <div class="showcase-tab" data-img="mon-img-3" tabindex="0" role="button" aria-pressed="false">
+              <h3>Inteligência de clientes</h3>
+              <p>Identifique o volume de aberturas por cliente e por assunto. Saiba quais clientes têm o SLA estourado com mais frequência e quais assuntos demandam mais tempo.</p>
+            </div>
+            <div class="showcase-tab" data-img="mon-img-4" tabindex="0" role="button" aria-pressed="false">
+              <h3>Performance de agentes e times</h3>
+              <p>Faça comparativos entre times e agentes. Visualize a fila de chamados pendentes e o tempo médio de resolução de cada membro da equipe.</p>
+            </div>
+          </div>
+          <div class="showcase-display">
+            <img src="img/monitor-3.png" id="mon-img-1" class="showcase-large-img active" alt="Visão Geral">
+            <img src="img/monitor-4.png" id="mon-img-2" class="showcase-large-img" alt="Visão de SLA">
+            <img src="img/monitor-7.png" id="mon-img-3" class="showcase-large-img" alt="Métricas de Clientes">
+            <img src="img/monitor-8.png" id="mon-img-4" class="showcase-large-img" alt="Performance de Agentes">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLANOS -->
+    <section id="planos" class="pricing-section">
+      <div class="section-header fade-in-up">
+        <span class="eyebrow">Investimento</span>
+        <h2>Plano simples. Transparência total.</h2>
+        <p>Acesso completo ao pacote Atrium Desk (Chat + Monitor).</p>
+      </div>
+
+      <div class="pricing-container fade-in-up">
+        <div class="pricing-card highlight">
+          <div class="pricing-header">
+            <h3>Atrium Desk Pro</h3>
+            <div class="price">
+              <span class="currency">R$</span>
+              <span class="value">297</span>
+              <span class="period">/mês</span>
+            </div>
+            <p class="pricing-desc">O ecossistema completo para a sua equipe de atendimento assumir o controle.</p>
+          </div>
+          <div class="pricing-features">
+            <ul>
+              <li><i class="bi bi-check2-circle"></i> <strong>Até 10 atendentes</strong> inclusos</li>
+              <li><i class="bi bi-check2-circle"></i> <strong>2 conexões</strong> de WhatsApp</li>
+              <li><i class="bi bi-check2-circle"></i> <strong>Atrium Chat</strong> (omnichannel + IA)</li>
+              <li><i class="bi bi-check2-circle"></i> <strong>Atrium Monitor</strong> (dashboards de SLA)</li>
+              <li><i class="bi bi-check2-circle"></i> Suporte técnico especializado</li>
+            </ul>
+          </div>
+          <a href="#agendar" class="btn-primary btn-block"><span>Agendar Demonstração</span></a>
+        </div>
+
+        <div class="pricing-card secondary">
+          <div class="pricing-header">
+            <h3>Implantação (Setup)</h3>
+            <div class="price setup-price">
+              <span class="currency">R$</span>
+              <span class="value">499</span>
+              <span class="period">taxa única</span>
+            </div>
+            <p class="pricing-desc">Configuração dos servidores, integração das linhas e treinamento completo da sua equipe.</p>
+          </div>
+          <div class="pricing-features extras">
+            <h4>Sua operação cresceu?</h4>
+            <p class="extras-desc">Expanda sem precisar mudar de plano:</p>
+            <ul>
+              <li><i class="bi bi-plus-circle"></i> <strong>R$ 30/mês</strong> por atendente extra</li>
+              <li><i class="bi bi-plus-circle"></i> <strong>R$ 50/mês</strong> por WhatsApp extra</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA / AGENDAMENTO -->
+    <section id="agendar" class="cta-section">
+      <div class="cta-container fade-in-up">
+        <div class="cta-text">
+          <span class="eyebrow">Fale com a gente</span>
+          <h2>Pronto para transformar seu atendimento?</h2>
+          <p>Escolha um horário na agenda ao lado para agendar uma demonstração completa do Atrium Desk com nossos especialistas.</p>
+          <div class="cta-contact-info">
+            <p><i class="bi bi-envelope-fill"></i> contato@atriumdesk.com</p>
+          </div>
+        </div>
+
+        <div class="cta-embed">
+          <iframe src="https://calendly.com/contato-australisdev/new-meeting" title="Agendamento de Demonstração" loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-col brand-col">
+        <a href="#hero" class="logo-link">
+          <span class="logo-text">Atrium <strong>Chat</strong></span>
+        </a>
+        <p>Soluções completas em atendimento multicanal, inteligência artificial e métricas operacionais avançadas.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#hero">Início</a></li>
+          <li><a href="#atrium-chat">Atrium Chat</a></li>
+          <li><a href="#atrium-monitor">Atrium Monitor</a></li>
+          <li><a href="#planos">Planos</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Legal e Contato</h4>
+        <ul>
+          <li><a href="/termos">Termos de Uso</a></li>
+          <li><a href="/privacidade">Política de Privacidade</a></li>
+          <li><a href="mailto:contato@atriumchat.com">contato@atriumchat.com</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-container">
+        <p>&copy; 2026 Atrium Chat. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
