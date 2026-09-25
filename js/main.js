@@ -102,21 +102,176 @@ document.addEventListener("DOMContentLoaded",function(){
   const pricePeriod=document.getElementById('pricePeriod');
   const lblM=document.getElementById('lbl-month'), lblY=document.getElementById('lbl-year');
   let yearly=false;
-  sw.addEventListener('click',()=>{
-    yearly=!yearly;
-    sw.classList.toggle('yr',yearly);
-    lblM.classList.toggle('on',!yearly);
-    lblY.classList.toggle('on',yearly);
-    priceVal.style.opacity=0;
-    setTimeout(()=>{
-      priceVal.textContent=yearly?'252':'297';
-      pricePeriod.textContent=yearly?'/mês, anual':'/mês';
-      priceVal.style.opacity=1;
-    },150);
-  });
+  if(sw && priceVal && pricePeriod && lblM && lblY){
+    sw.addEventListener('click',()=>{
+      yearly=!yearly;
+      sw.classList.toggle('yr',yearly);
+      lblM.classList.toggle('on',!yearly);
+      lblY.classList.toggle('on',yearly);
+      priceVal.style.opacity=0;
+      setTimeout(()=>{
+        priceVal.textContent=yearly?'252':'297';
+        pricePeriod.textContent=yearly?'/mês, anual':'/mês';
+        priceVal.style.opacity=1;
+      },150);
+    });
+  }
 
   const hdr=document.getElementById('hdr');
-  window.addEventListener('scroll',()=>{
-    hdr.style.borderBottomColor = window.scrollY>20 ? 'var(--border-hi)' : 'var(--border)';
+  if(hdr){
+    window.addEventListener('scroll',()=>{
+      hdr.style.borderBottomColor = window.scrollY>20 ? 'var(--border-hi)' : 'var(--border)';
+    });
+  }
+
+  // Desktop Dropdown click/toggle support for touch/keyboard
+  document.querySelectorAll('.has-dropdown').forEach(dd => {
+    const btn = dd.querySelector('.nav-link');
+    if (btn) {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isExpanded = dd.classList.toggle('active');
+        btn.setAttribute('aria-expanded', isExpanded);
+        document.querySelectorAll('.has-dropdown').forEach(other => {
+          if (other !== dd) {
+            other.classList.remove('active');
+            const otherBtn = other.querySelector('.nav-link');
+            if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+          }
+        });
+      });
+    }
   });
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.has-dropdown')) {
+      document.querySelectorAll('.has-dropdown').forEach(dd => {
+        dd.classList.remove('active');
+        const btn = dd.querySelector('.nav-link');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      });
+    }
+  });
+
+  // Mobile menu toggle
+  const mobileBtn=document.querySelector('.mobile-toggle');
+  const mobileDrawer=document.querySelector('.mobile-nav-drawer');
+  if(mobileBtn && mobileDrawer){
+    mobileBtn.addEventListener('click',()=>{
+      const isOpen=mobileDrawer.classList.toggle('open');
+      mobileBtn.innerHTML=isOpen ? '<i class="bi bi-x-lg"></i>' : '<i class="bi bi-list"></i>';
+    });
+    mobileDrawer.querySelectorAll('a').forEach(a=>{
+      a.addEventListener('click',()=>{
+        mobileDrawer.classList.remove('open');
+        mobileBtn.innerHTML='<i class="bi bi-list"></i>';
+      });
+    });
+  }
+
+  // FAQ Accordion & Live Filter
+  const faqItems=document.querySelectorAll('.faq-item');
+  const searchInput=document.querySelector('.faq-search-input');
+  const clearBtn=document.querySelector('.faq-search-clear');
+  const filterChips=document.querySelectorAll('.faq-chip');
+  const emptyState=document.querySelector('.faq-empty');
+
+  if(faqItems.length>0){
+    faqItems.forEach(item=>{
+      const header=item.querySelector('.faq-header');
+      if(header){
+        header.addEventListener('click',()=>{
+          const isActive=item.classList.contains('active');
+          faqItems.forEach(i=>i.classList.remove('active'));
+          if(!isActive) item.classList.add('active');
+        });
+      }
+    });
+
+    let currentCategory='all';
+    let currentQuery='';
+
+    function filterFAQ(){
+      let visibleCount=0;
+      const q=currentQuery.trim().toLowerCase();
+
+      faqItems.forEach(item=>{
+        const cat=item.dataset.category || '';
+        const title=item.querySelector('h3')?.textContent.toLowerCase() || '';
+        const body=item.querySelector('.faq-body')?.textContent.toLowerCase() || '';
+
+        const matchesCat=(currentCategory==='all' || cat===currentCategory);
+        const matchesQuery=(!q || title.includes(q) || body.includes(q));
+
+        if(matchesCat && matchesQuery){
+          item.style.display='block';
+          visibleCount++;
+        } else {
+          item.style.display='none';
+          item.classList.remove('active');
+        }
+      });
+
+      if(emptyState){
+        emptyState.style.display = visibleCount===0 ? 'block' : 'none';
+      }
+    }
+
+    if(searchInput){
+      searchInput.addEventListener('input',e=>{
+        currentQuery=e.target.value;
+        if(clearBtn) clearBtn.style.display=currentQuery.length>0 ? 'block' : 'none';
+        filterFAQ();
+      });
+    }
+
+    if(clearBtn){
+      clearBtn.addEventListener('click',()=>{
+        if(searchInput) searchInput.value='';
+        currentQuery='';
+        clearBtn.style.display='none';
+        filterFAQ();
+      });
+    }
+
+    if(filterChips.length>0){
+      filterChips.forEach(chip=>{
+        chip.addEventListener('click',()=>{
+          filterChips.forEach(c=>c.classList.remove('active'));
+          chip.classList.add('active');
+          currentCategory=chip.dataset.filter || 'all';
+          filterFAQ();
+        });
+      });
+    }
+  }
+
+  // Comparativo Savings Calculator
+  const agentsSlider=document.getElementById('agentsSlider');
+  const agentsCount=document.getElementById('agentsCount');
+  const atriumTotal=document.getElementById('atriumTotal');
+  const marketTotal=document.getElementById('marketTotal');
+  const savingsTotal=document.getElementById('savingsTotal');
+
+  if(agentsSlider && agentsCount && atriumTotal && marketTotal && savingsTotal){
+    function updateCalc(){
+      const agents=parseInt(agentsSlider.value);
+      agentsCount.textContent=agents;
+
+      // Atrium pricing: Base R$297 includes up to 10 agents. Extra agents are R$30/mo
+      const extraAgents=Math.max(0, agents-10);
+      const atriumCost=297 + (extraAgents * 30);
+
+      // Traditional SaaS: Average R$150/user/month (Zendesk, Intercom, Freshdesk standard tiers)
+      const marketCost=agents * 150;
+      const saved=marketCost - atriumCost;
+
+      atriumTotal.textContent=`R$ ${atriumCost.toLocaleString('pt-BR')}`;
+      marketTotal.textContent=`R$ ${marketCost.toLocaleString('pt-BR')}`;
+      savingsTotal.textContent=`R$ ${Math.max(0, saved).toLocaleString('pt-BR')}/mês`;
+    }
+
+    agentsSlider.addEventListener('input', updateCalc);
+    updateCalc();
+  }
 });

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Casos de Uso por Segmento | Atrium Desk</title>
+<meta name="description" content="Descubra como o Atrium Desk resolve os gargalos operacionais reais de E-commerce, Clínicas, SaaS, Educação e Serviços B2B com controle de SLA e IA.">
+<link rel="icon" href="/img/dark_logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<header id="hdr">
+  <div class="hdr-inner">
+    <a href="/" class="logo"><img src="/img/dark_logo.png" alt="Atrium Chat">Atrium <strong>Chat</strong></a>
+    <nav class="nav">
+      <!-- 1. Dropdown Produto -->
+      <div class="nav-item has-dropdown">
+        <button class="nav-link" type="button" aria-haspopup="true" aria-expanded="false">
+          Produto <i class="bi bi-chevron-down"></i>
+        </button>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-inner">
+            <a href="/#atrium-chat" class="dropdown-item">
+              <div class="dropdown-icon chat-icon"><i class="bi bi-chat-dots-fill"></i></div>
+              <div class="dropdown-text">
+                <strong>Atrium Chat</strong>
+                <span>Omnichannel unificado, IA e automações</span>
+              </div>
+            </a>
+            <a href="/#atrium-monitor" class="dropdown-item">
+              <div class="dropdown-icon monitor-icon"><i class="bi bi-speedometer2"></i></div>
+              <div class="dropdown-text">
+                <strong>Atrium Monitor</strong>
+                <span>Controle rigoroso de SLAs e tempos de resposta</span>
+              </div>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="/comparativo" class="dropdown-item">
+              <div class="dropdown-icon comp-icon"><i class="bi bi-bar-chart-steps"></i></div>
+              <div class="dropdown-text">
+                <strong>Comparativo de Soluções</strong>
+                <span>Atrium Desk Pro vs. Chatwoot vs. Outros</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Casos de Uso -->
+      <a href="/casos-de-uso" class="nav-link" style="color:var(--white)">Casos de Uso</a>
+
+      <!-- 3. Planos -->
+      <a href="/#planos" class="nav-link">Planos</a>
+
+      <!-- 4. Dropdown Recursos -->
+      <div class="nav-item has-dropdown">
+        <button class="nav-link" type="button" aria-haspopup="true" aria-expanded="false">
+          Recursos <i class="bi bi-chevron-down"></i>
+        </button>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-inner">
+            <a href="/faq" class="dropdown-item">
+              <div class="dropdown-icon faq-icon"><i class="bi bi-question-circle"></i></div>
+              <div class="dropdown-text">
+                <strong>FAQ & Dúvidas</strong>
+                <span>Perguntas frequentes e regras de implantação</span>
+              </div>
+            </a>
+            <a href="/status" class="dropdown-item">
+              <div class="dropdown-icon status-icon"><i class="bi bi-activity"></i></div>
+              <div class="dropdown-text">
+                <strong>Status dos Serviços</strong>
+                <span>Disponibilidade 99.9% e UptimeRobot</span>
+              </div>
+            </a>
+            <a href="/changelog" class="dropdown-item">
+              <div class="dropdown-icon changelog-icon"><i class="bi bi-rocket-takeoff"></i></div>
+              <div class="dropdown-text">
+                <strong>Changelog</strong>
+                <span>Histórico de melhorias e versões lançadas</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Status Pill -->
+      <a href="/status" class="nav-status-pill" title="Status dos serviços 99.9% online">
+        <span class="status-dot"></span> 99.9% Online
+      </a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:12px">
+      <a href="/#agendar" class="btn btn-ghost" style="padding:10px 18px">Agendar Demo</a>
+      <button class="mobile-toggle" aria-label="Abrir Menu"><i class="bi bi-list"></i></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav-drawer" id="mobileDrawer">
+  <div class="drawer-group">
+    <div class="drawer-group-title">PRODUTO</div>
+    <a href="/#atrium-chat" class="drawer-item">
+      <span class="item-left"><i class="bi bi-chat-dots-fill"></i> Atrium Chat</span>
+      <i class="bi bi-chevron-right"></i>
+    </a>
+    <a href="/#atrium-monitor" class="drawer-item">
+      <span class="item-left"><i class="bi bi-speedometer2"></i> Atrium Monitor</span>
+      <i class="bi bi-chevron-right"></i>
+    </a>
+    <a href="/comparativo" class="drawer-item">
+      <span class="item-left"><i class="bi bi-bar-chart-steps"></i> Comparativo de Soluções</span>
+      <i class="bi bi-chevron-right"></i>
+    </a>
+  </div>
+
+  <div class="drawer-group">
+    <div class="drawer-group-title">SOLUÇÕES & CASOS</div>
+    <a href="/casos-de-uso" class="drawer-item">
+      <span class="item-left"><i class="bi bi-briefcase-fill"></i> Casos de Uso por Segmento</span>
+      <i class="bi bi-chevron-right"></i>
+    </a>
+  </div>
+
+  <div class="drawer-group">
+    <div class="drawer-group-title">INVESTIMENTO</div>
+    <a href="/#planos" class="drawer-item">
+      <span class="item-left"><i class="bi bi-tag-fill"></i> Planos e Preços</span>
+      <i class="bi bi-chevron-right"></i>
+    </a>
+  </div>
+
+  <div class="drawer-group">
+    <div class="drawer-group-title">RECURSOS & SUPORTE</div>
+    <a href="/faq" class="drawer-item">
+      <span class="item-left"><i class="bi bi-question-circle-fill"></i> Perguntas Frequentes (FAQ)</span>
+      <i class="bi bi-chevron-right"></i>
+    </a>
+    <a href="/status" class="drawer-item">
+      <span class="item-left"><i class="bi bi-activity"></i> Status dos Sistemas (99.9%)</span>
+      <i class="bi bi-chevron-right"></i>
+    </a>
+    <a href="/changelog" class="drawer-item">
+      <span class="item-left"><i class="bi bi-rocket-takeoff-fill"></i> Changelog & Atualizações</span>
+      <i class="bi bi-chevron-right"></i>
+    </a>
+  </div>
+
+  <a href="/#agendar" class="btn btn-primary" style="margin-top:10px;text-align:center">Agendar Demonstração <i class="bi bi-arrow-right"></i></a>
+</div>
+
+<main>
+  <section class="page-hero">
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+    <div class="container">
+      <span class="eyebrow"><i class="bi bi-buildings"></i> Cenários Operacionais Reais</span>
+      <h1>Como o Atrium Desk resolve o seu dia a dia</h1>
+      <p>Em vez de depoimentos genéricos ou promessas vagas, apresentamos os gargalos operacionais específicos de cada mercado e como a combinação de Atrium Chat + Atrium Monitor soluciona cada um deles.</p>
+    </div>
+  </section>
+
+  <section class="sec" style="padding-top:0">
+    <div class="container">
+      <div class="cases-grid">
+
+        <!-- 1. E-COMMERCE & VAREJO -->
+        <div class="case-card fade">
+          <div>
+            <div class="case-card-header">
+              <div class="case-icon"><i class="bi bi-cart-check-fill"></i></div>
+              <div>
+                <h3>E-commerce & Varejo Online</h3>
+                <span class="subtitle">Alto volume, dúvidas pré-venda e pós-venda</span>
+              </div>
+            </div>
+
+            <div class="case-problem">
+              <strong>O Desafio:</strong> Picos sazonais (promoções, datas comemorativas) gerando filas gigantes no WhatsApp com clientes ansiosos por código de rastreio, dúvidas sobre tamanhos ou trocas. Conversas demoradas geram abandono de compra e cancelamentos.
+            </div>
+
+            <div class="case-solution">
+              <strong>Solução Atrium Desk:</strong>
+              <ul style="padding-left:18px;margin-top:6px">
+                <li>Fila expressa para dúvidas pré-venda com resposta em menos de 30 segundos;</li>
+                <li>Templates de respostas rápidas para rastreio e políticas de devolução;</li>
+                <li>Atrium Monitor apontando horários exatos de pico para reforço de atendentes de escala.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="case-metrics">
+            <div class="metric-box">
+              <div class="val" style="color:#4ade80">&lt; 30s</div>
+              <div class="lbl">1ª Resposta em Pré-venda</div>
+            </div>
+            <div class="metric-box">
+              <div class="val" style="color:var(--white)">+28%</div>
+              <div class="lbl">Conversão de Carrinhos</div>
+            </div>
+            <div class="metric-box">
+              <div class="val" style="color:#4ade80">0</div>
+              <div class="lbl">Chats esquecidos em picos</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. CLÍNICAS & SAÚDE -->
+        <div class="case-card fade">
+          <div>
+            <div class="case-card-header">
+              <div class="case-icon"><i class="bi bi-heart-pulse-fill"></i></div>
+              <div>
+                <h3>Clínicas, Consultórios & Saúde</h3>
+                <span class="subtitle">Agendamentos, confirmações e sigilo médico (LGPD)</span>
+              </div>
+            </div>
+
+            <div class="case-problem">
+              <strong>O Desafio:</strong> Pacientes chamando simultaneamente para agendar, remarcar ou confirmar exames. Recepcionistas sobrecarregadas dividindo o mesmo celular, gerando agendamentos duplicados, atrasos e risco de vazamento de dados de saúde.
+            </div>
+
+            <div class="case-solution">
+              <strong>Solução Atrium Desk:</strong>
+              <ul style="padding-left:18px;margin-top:6px">
+                <li>Atribuição automática por especialidade (Cardiologia, Odonto, Exames, Financeiro);</li>
+                <li>Histórico unificado do paciente com acesso restrito por permissões;</li>
+                <li>Total conformidade com a LGPD: dados armazenados em nuvem segura com logs de auditoria.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="case-metrics">
+            <div class="metric-box">
+              <div class="val" style="color:#4ade80">-65%</div>
+              <div class="lbl">Faltas (No-Show)</div>
+            </div>
+            <div class="metric-box">
+              <div class="val" style="color:var(--white)">100%</div>
+              <div class="lbl">Conformidade LGPD</div>
+            </div>
+            <div class="metric-box">
+              <div class="val" style="color:#4ade80">Zero</div>
+              <div class="lbl">Conflito de agenda</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. SAAS & TECH -->
+        <div class="case-card fade">
+          <div>
+            <div class="case-card-header">
+              <div class="case-icon"><i class="bi bi-laptop-fill"></i></div>
+              <div>
+                <h3>Empresas de Software & SaaS</h3>
+                <span class="subtitle">Suporte técnico N1/N2/N3 e cumprimento de SLA contratual</span>
+              </div>
+            </div>
+
+            <div class="case-problem">
+              <strong>O Desafio:</strong> Clientes corporativos B2B pagando mensalidades altas e exigindo cumprimento rigoroso de SLA de primeira resposta e tempo de resolução. Falta de visibilidade gerando multas contratuais e atrito na renovação de contratos.
+            </div>
+
+            <div class="case-solution">
+              <strong>Solução Atrium Desk:</strong>
+              <ul style="padding-left:18px;margin-top:6px">
+                <li>Atrium Monitor calculando o SLA de cada ticket com alertas antes do vencimento;</li>
+                <li>Copiloto de IA gerando resumos instantâneos de logs e passos para reprodução de bugs;</li>
+                <li>Quadro Kanban para acompanhar o fluxo entre Suporte e Engenharia.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="case-metrics">
+            <div class="metric-box">
+              <div class="val" style="color:#4ade80">99.4%</div>
+              <div class="lbl">SLA Respeitado</div>
+            </div>
+            <div class="metric-box">
+              <div class="val" style="color:var(--white)">-50%</div>
+              <div class="lbl">Tempo de Handoff N1→N2</div>
+            </div>
+            <div class="metric-box">
+              <div class="val" style="color:#4ade80">-32%</div>
+              <div class="lbl">Risco de Churn</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. EDUCAÇÃO & CURSOS -->
+        <div class="case-card fade">
+          <div>
+            <div class="case-card-header">
+              <div class="case-icon"><i class="bi bi-mortarboard-fill"></i></div>
+              <div>
+                <h3>Educação, Escolas & Cursos</h3>
+                <span class="subtitle">Matrículas, secretaria acadêmica e financeiro</span>
+              </div>
+            </div>
+
+            <div class="case-problem">
+              <strong>O Desafio:</strong> Sobrecarga brutal no início do semestre letivo com pais e alunos enviando mensagens simultâneas sobre grade horária, 2ª via de boleto e dúvidas pedagógicas, travando as linhas telefônicas e o WhatsApp da instituição.
+            </div>
+
+            <div class="case-solution">
+              <strong>Solução Atrium Desk:</strong>
+              <ul style="padding-left:18px;margin-top:6px">
+                <li>Portal de Autoatendimento / FAQ integrado para resolver 40% das dúvidas simples;</li>
+                <li>Roteamento de novos interessados direto para os consultores de matrícula;</li>
+                <li>Filas separadas para Secretaria Acadêmica e Setor Financeiro com atendentes especializados.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="case-metrics">
+            <div class="metric-box">
+              <div class="val" style="color:#4ade80">+35%</div>
+              <div class="lbl">Conversão de Matrículas</div>
+            </div>
+            <div class="metric-box">
+              <div class="val" style="color:var(--white)">-40%</div>
+              <div class="lbl">Carga na Secretaria</div>
+            </div>
+            <div class="metric-box">
+              <div class="val" style="color:#4ade80">4.9/5</div>
+              <div class="lbl">Avaliação dos Alunos</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. B2B & CONTABILIDADE -->
+        <div class="case-card fade" style="grid-column: 1 / -1">
+          <div style="display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center">
+            <div>
+              <div class="case-card-header">
+                <div class="case-icon"><i class="bi bi-briefcase-fill"></i></div>
+                <div>
+                  <h3>Serviços B2B, Contabilidade & Consultorias</h3>
+                  <span class="subtitle">Envio de guias, fechamentos fiscais e gestão de esforço por cliente</span>
+                </div>
+              </div>
+
+              <div class="case-problem">
+                <strong>O Desafio:</strong> Dificuldade em precificar honorários de forma justa porque a diretoria não sabe quais empresas-clientes exigem horas excessivas de atendimento via WhatsApp no fechamento de folha e declarações de tributos.
+              </div>
+
+              <div class="case-solution">
+                <strong>Solução Atrium Desk:</strong>
+                <p>Com o <strong>Módulo de Inteligência de Clientes do Atrium Monitor</strong>, seu escritório visualiza o volume exato de tickets, tempo médio de resolução e estouros de prazo por CNPJ. Você descobre quem consome seu time e pode renegociar contratos baseado em dados concretos de auditoria.</p>
+              </div>
+            </div>
+
+            <div style="background:rgba(0,0,0,.35);padding:24px;border-radius:14px;border:1px solid var(--border)">
+              <h4 style="font-size:.95rem;color:var(--white);margin-bottom:14px"><i class="bi bi-graph-up" style="color:var(--red-hi)"></i> Ganhos Operacionais Comprovados:</h4>
+              <ul style="list-style:none;padding:0;font-size:.9rem;color:var(--gray)">
+                <li style="margin-bottom:12px;display:flex;gap:10px"><i class="bi bi-check2-circle" style="color:#4ade80"></i> Mapeamento claro do custo operacional por empresa atendida</li>
+                <li style="margin-bottom:12px;display:flex;gap:10px"><i class="bi bi-check2-circle" style="color:#4ade80"></i> Fila organizada por vencimento de guias e declarações</li>
+                <li style="margin-bottom:12px;display:flex;gap:10px"><i class="bi bi-check2-circle" style="color:#4ade80"></i> Histórico perene de orientações fiscais registradas para segurança jurídica</li>
+              </ul>
+              <a href="/#agendar" class="btn btn-primary" style="width:100%;margin-top:10px">Ver Demonstração para B2B <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="cta-card fade" style="margin-top:60px">
+        <div>
+          <span class="eyebrow">Seu negócio tem necessidades particulares?</span>
+          <h2>Vamos analisar a sua operação na prática</h2>
+          <p>Traga seus gargalos de atendimento para a nossa chamada. Mostraremos a melhor configuração de departamentos, SLAs e canais para a sua empresa.</p>
+          <div class="contact"><i class="bi bi-envelope-fill"></i> contato@atriumdesk.com</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:14px;align-items:flex-start;justify-content:center">
+          <a href="/#agendar" class="btn btn-primary" style="padding:14px 28px">Agendar Demonstração Gratuita <i class="bi bi-arrow-right"></i></a>
+          <a href="/comparativo" class="btn btn-ghost" style="padding:14px 28px"><i class="bi bi-table"></i> Comparar com Outras Opções</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="fgrid2">
+      <div>
+        <a href="/" class="logo"><img src="/img/dark_logo.png" alt="Atrium Chat">Atrium <strong>Chat</strong></a>
+        <p>Soluções completas em atendimento multicanal, inteligência artificial e controle de SLA em tempo real.</p>
+      </div>
+      <div class="fcol">
+        <h4>Ecossistema</h4>
+        <ul>
+          <li><a href="/#hero">Início</a></li>
+          <li><a href="/#atrium-chat">Atrium Chat</a></li>
+          <li><a href="/#atrium-monitor">Atrium Monitor</a></li>
+          <li><a href="/casos-de-uso">Casos de Uso</a></li>
+          <li><a href="/comparativo">Comparativo Detalhado</a></li>
+          <li><a href="/#planos">Planos & Preços</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h4>Transparência</h4>
+        <ul>
+          <li><a href="/faq">Perguntas Frequentes (FAQ)</a></li>
+          <li><a href="/status">Status dos Serviços (Uptime)</a></li>
+          <li><a href="/changelog">Changelog & Novidades</a></li>
+          <li><a href="/termos">Termos de Uso</a></li>
+          <li><a href="/privacidade">Política de Privacidade</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fbottom">&copy; 2026 Atrium Chat. Operado por Australis DEV (CNPJ: 68.496.294/0001-28). Todos os direitos reservados.</div>
+  </div>
+</footer>
+
+<script src="/js/main.js"></script>
+</body>
+</html>

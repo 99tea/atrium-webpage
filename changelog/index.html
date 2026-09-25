@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Changelog & Evolução do Produto | Atrium Desk</title>
+<meta name="description" content="Acompanhe todas as melhorias, novas funcionalidades e atualizações contínuas de engenharia entregues no ecossistema Atrium Desk.">
+<link rel="icon" href="/img/dark_logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<header id="hdr">
+  <div class="hdr-inner">
+    <a href="/" class="logo"><img src="/img/dark_logo.png" alt="Atrium Chat">Atrium <strong>Chat</strong></a>
+    <nav class="nav">
+      <!-- 1. Dropdown Produto -->
+      <div class="nav-item has-dropdown">
+        <button class="nav-link" type="button" aria-haspopup="true" aria-expanded="false">
+          Produto <i class="bi bi-chevron-down"></i>
+        </button>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-inner">
+            <a href="/#atrium-chat" class="dropdown-item">
+              <div class="dropdown-icon chat-icon"><i class="bi bi-chat-dots-fill"></i></div>
+              <div class="dropdown-text">
+                <strong>Atrium Chat</strong>
+                <span>Omnichannel unificado, IA e automações</span>
+              </div>
+            </a>
+            <a href="/#atrium-monitor" class="dropdown-item">
+              <div class="dropdown-icon monitor-icon"><i class="bi bi-speedometer2"></i></div>
+              <div class="dropdown-text">
+                <strong>Atrium Monitor</strong>
+                <span>Controle rigoroso de SLAs e tempos de resposta</span>
+              </div>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="/comparativo" class="dropdown-item">
+              <div class="dropdown-icon comp-icon"><i class="bi bi-bar-chart-steps"></i></div>
+              <div class="dropdown-text">
+                <strong>Comparativo de Soluções</strong>
+                <span>Atrium Desk Pro vs. Chatwoot vs. Outros</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Casos de Uso -->
+      <a href="/casos-de-uso" class="nav-link">Casos de Uso</a>
+
+      <!-- 3. Planos -->
+      <a href="/#planos" class="nav-link">Planos</a>
+
+      <!-- 4. Dropdown Recursos -->
+      <div class="nav-item has-dropdown">
+        <button class="nav-link" type="button" aria-haspopup="true" aria-expanded="false">
+          Recursos <i class="bi bi-chevron-down"></i>
+        </button>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-inner">
+            <a href="/faq" class="dropdown-item">
+              <div class="dropdown-icon faq-icon"><i class="bi bi-question-circle"></i></div>
+              <div class="dropdown-text">
+                <strong>FAQ & Dúvidas</strong>
+                <span>Perguntas frequentes e regras de implantação</span>
+              </div>
+            </a>
+            <a href="/status" class="dropdown-item">
+              <div class="dropdown-icon status-icon"><i class="bi bi-activity"></i></div>
+              <div class="dropdown-text">
+                <strong>Status dos Serviços</strong>
+                <span>Disponibilidade 99.9% e UptimeRobot</span>
+              </div>
+            </a>
+            <a href="/changelog" class="dropdown-item">
+              <div class="dropdown-icon changelog-icon"><i class="bi bi-rocket-takeoff"></i></div>
+              <div class="dropdown-text">
+                <strong>Changelog</strong>
+                <span>Histórico de melhorias e versões lançadas</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Status Pill -->
+      <a href="/status" class="nav-status-pill" title="Status dos serviços 99.9% online">
+        <span class="status-dot"></span> 99.9% Online
+      </a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:12px">
+      <a href="/#agendar" class="btn btn-ghost" style="padding:10px 18px">Agendar Demo</a>
+      <button class="mobile-toggle" aria-label="Abrir Menu"><i class="bi bi-list"></i></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav-drawer" id="mobileDrawer">
+  <div class="drawer-group">
+    <div class="drawer-group-title">PRODUTO</div>
+    <a href="/#atrium-chat" class="drawer-item">
+      <span class="item-left"><i class="bi bi-chat-dots-fill"></i> Atrium Chat</span>
+      <i class="bi bi-chevron-right"></i>
+    </a>
+    <a href="/#atrium-monitor" class="drawer-item">
+      <span class="item-left"><i class="bi bi-speedometer2"></i> Atrium Monitor</span>
+      <i class="bi bi-chevron-right"></i>
+    </a>
+    <a href="/comparativo" class="drawer-item">
+      <span class="item-left"><i class="bi bi-bar-chart-steps"></i> Comparativo de Soluções</span>
+      <i class="bi bi-chevron-right"></i>
+    </a>
+  </div>
+
+  <div class="drawer-group">
+    <div class="drawer-group-title">SOLUÇÕES & CASOS</div>
+    <a href="/casos-de-uso" class="drawer-item">
+      <span class="item-left"><i class="bi bi-briefcase-fill"></i> Casos de Uso por Segmento</span>
+      <i class="bi bi-chevron-right"></i>
+    </a>
+  </div>
+
+  <div class="drawer-group">
+    <div class="drawer-group-title">INVESTIMENTO</div>
+    <a href="/#planos" class="drawer-item">
+      <span class="item-left"><i class="bi bi-tag-fill"></i> Planos e Preços</span>
+      <i class="bi bi-chevron-right"></i>
+    </a>
+  </div>
+
+  <div class="drawer-group">
+    <div class="drawer-group-title">RECURSOS & SUPORTE</div>
+    <a href="/faq" class="drawer-item">
+      <span class="item-left"><i class="bi bi-question-circle-fill"></i> Perguntas Frequentes (FAQ)</span>
+      <i class="bi bi-chevron-right"></i>
+    </a>
+    <a href="/status" class="drawer-item">
+      <span class="item-left"><i class="bi bi-activity"></i> Status dos Sistemas (99.9%)</span>
+      <i class="bi bi-chevron-right"></i>
+    </a>
+    <a href="/changelog" class="drawer-item">
+      <span class="item-left"><i class="bi bi-rocket-takeoff-fill"></i> Changelog & Atualizações</span>
+      <i class="bi bi-chevron-right"></i>
+    </a>
+  </div>
+
+  <a href="/#agendar" class="btn btn-primary" style="margin-top:10px;text-align:center">Agendar Demonstração <i class="bi bi-arrow-right"></i></a>
+</div>
+
+<main>
+  <section class="page-hero">
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+    <div class="container">
+      <span class="eyebrow"><i class="bi bi-rocket-takeoff-fill"></i> Engenharia em Evolução</span>
+      <h1>Changelog do Produto</h1>
+      <p>Entregamos melhorias contínuas todas as semanas para garantir que a sua operação de atendimento trabalhe sempre com o que há de mais moderno em estabilidade, IA e monitoramento.</p>
+    </div>
+  </section>
+
+  <section class="sec" style="padding-top:0">
+    <div class="container">
+      <div class="timeline">
+
+        <!-- v2.4 -->
+        <div class="timeline-item fade">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div style="display:flex;align-items:center;gap:12px">
+                <span class="version-badge">v2.4.0</span>
+                <h3 style="font-size:1.25rem;margin:0">Copiloto de IA & Distribuição por Carga de Trabalho</h3>
+              </div>
+              <span class="timeline-date"><i class="bi bi-calendar3"></i> 20 de Agosto de 2026</span>
+            </div>
+            <p style="font-size:.92rem;color:var(--gray)">Uma grande atualização voltada para a produtividade dos atendentes humanos e equilíbrio operacional da equipe.</p>
+            <ul class="timeline-list">
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <div>
+                  <span class="tag-badge feature">Novidade</span>
+                  <strong>Resumo Automático de Atendimentos:</strong> Ao transferir uma conversa entre setores, a IA gera em 2 segundos uma síntese com o contexto, solicitações do cliente e pendências.
+                </div>
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <div>
+                  <span class="tag-badge feature">Novidade</span>
+                  <strong>Ajuste de Tom e Redação:</strong> Botões no editor de texto para converter rascunhos em mensagens formais, cordiais ou resumidas com 1 clique.
+                </div>
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <div>
+                  <span class="tag-badge improvement">Melhoria</span>
+                  <strong>Roteamento Dinâmico por Carga:</strong> O sistema passa a distribuir novos chats de WhatsApp priorizando atendentes com menor número de conversas ativas no momento.
+                </div>
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <div>
+                  <span class="tag-badge security">Performance</span>
+                  Redução de 35% no consumo de memória em instâncias de alto tráfego com mais de 10.000 mensagens/dia.
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- v2.3 -->
+        <div class="timeline-item fade">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div style="display:flex;align-items:center;gap:12px">
+                <span class="version-badge">v2.3.2</span>
+                <h3 style="font-size:1.25rem;margin:0">Atrium Monitor: SLA por Cliente & Alertas Webhook</h3>
+              </div>
+              <span class="timeline-date"><i class="bi bi-calendar3"></i> 14 de Julho de 2026</span>
+            </div>
+            <p style="font-size:.92rem;color:var(--gray)">Novos relatórios e automações focadas em evitar o cancelamento de clientes estratégicos (prevenção de churn).</p>
+            <ul class="timeline-list">
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <div>
+                  <span class="tag-badge feature">Novidade</span>
+                  <strong>Módulo de Inteligência de Clientes:</strong> Visualize na tela do Atrium Monitor quais contas empresariais sofrem mais com atrasos de SLA e aja proativamente.
+                </div>
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <div>
+                  <span class="tag-badge feature">Novidade</span>
+                  <strong>Alertas de Estouro via Webhook:</strong> Envie notificações imediatas para canais no Slack, Discord ou bot de gestores quando um SLA crítico estiver a 5 minutos de estourar.
+                </div>
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <div>
+                  <span class="tag-badge improvement">Melhoria</span>
+                  <strong>Exportação de Relatórios Gerenciais:</strong> Geração de relatórios com 1 clique nos formatos CSV e PDF com filtros por período e atendente.
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- v2.2 -->
+        <div class="timeline-item fade">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div style="display:flex;align-items:center;gap:12px">
+                <span class="version-badge">v2.2.0</span>
+                <h3 style="font-size:1.25rem;margin:0">Gestão Visual em Kanban & Reprodutor de Áudio 2x</h3>
+              </div>
+              <span class="timeline-date"><i class="bi bi-calendar3"></i> 02 de Junho de 2026</span>
+            </div>
+            <p style="font-size:.92rem;color:var(--gray)">Aprimoramento do fluxo de trabalho diário dos atendentes com maior controle visual e velocidade no consumo de mídias.</p>
+            <ul class="timeline-list">
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <div>
+                  <span class="tag-badge feature">Novidade</span>
+                  <strong>Visualização Kanban:</strong> Arraste conversas entre colunas customizadas como "Aguardando Cliente", "Em Investigação Técnica" e "Finalizado".
+                </div>
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <div>
+                  <span class="tag-badge improvement">Melhoria</span>
+                  <strong>Áudios com Velocidade 1.5x e 2.0x:</strong> Ouça mensagens de voz de clientes no WhatsApp de forma acelerada com preservação de tom vocal.
+                </div>
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <div>
+                  <span class="tag-badge security">Segurança</span>
+                  Implementação de tokens temporários com rotação automática para segurança de anexos e mídias confidenciais.
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- v2.1 -->
+        <div class="timeline-item fade">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div style="display:flex;align-items:center;gap:12px">
+                <span class="version-badge">v2.1.0</span>
+                <h3 style="font-size:1.25rem;margin:0">WhatsApp Cloud API Oficial & Central de Ajuda</h3>
+              </div>
+              <span class="timeline-date"><i class="bi bi-calendar3"></i> 08 de Maio de 2026</span>
+            </div>
+            <p style="font-size:.92rem;color:var(--gray)">Suporte oficial e simplificado à Cloud API da Meta e portal de autoatendimento integrado.</p>
+            <ul class="timeline-list">
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <div>
+                  <span class="tag-badge feature">Novidade</span>
+                  <strong>Integração com WhatsApp Cloud API:</strong> Estabilidade total sem necessidade de manter aparelhos físicos conectados à tomada.
+                </div>
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <div>
+                  <span class="tag-badge feature">Novidade</span>
+                  <strong>Portal de FAQ e Central de Ajuda para Clientes:</strong> Seus clientes podem tirar dúvidas frequentes de autoatendimento antes de chamar um atendente humano.
+                </div>
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <div>
+                  <span class="tag-badge improvement">Melhoria</span>
+                  Painel de pré-visualização de mídias (PDFs, vídeos e imagens) diretamente no feed da conversa sem downloads desnecessários.
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- v2.0 -->
+        <div class="timeline-item fade">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div style="display:flex;align-items:center;gap:12px">
+                <span class="version-badge">v2.0.0</span>
+                <h3 style="font-size:1.25rem;margin:0">Lançamento Oficial: Ecossistema Atrium Desk</h3>
+              </div>
+              <span class="timeline-date"><i class="bi bi-calendar3"></i> 10 de Abril de 2026</span>
+            </div>
+            <p style="font-size:.92rem;color:var(--gray)">Marco inaugural da plataforma unindo a caixa de entrada omnichannel (Atrium Chat) com o painel analítico de SLA (Atrium Monitor) em um único plano com nuvem gerenciada.</p>
+            <ul class="timeline-list">
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <div>
+                  <span class="tag-badge feature">Novidade</span>
+                  Caixa unificada com suporte a WhatsApp, E-mail, Instagram Direct, Facebook Messenger e Live Chat.
+                </div>
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <div>
+                  <span class="tag-badge feature">Novidade</span>
+                  Atrium Monitor com cálculo contínuo de Tempo de Primeira Resposta (FRT) e Tempo Médio de Resolução (MTTR).
+                </div>
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <div>
+                  <span class="tag-badge feature">Novidade</span>
+                  Infraestrutura dedicada com backup automático diário e certificação SSL gerenciada.
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="cta-card fade" style="margin-top:60px">
+        <div>
+          <span class="eyebrow">Construído para você</span>
+          <h2>Tem alguma sugestão ou necessidade específica?</h2>
+          <p>Nosso roadmap de engenharia é guiado pelas necessidades reais das operações dos nossos clientes. Conte-nos o seu desafio na demonstração.</p>
+          <div class="contact"><i class="bi bi-envelope-fill"></i> contato@atriumdesk.com</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:14px;align-items:flex-start;justify-content:center">
+          <a href="/#agendar" class="btn btn-primary" style="padding:14px 28px">Agendar Demonstração <i class="bi bi-arrow-right"></i></a>
+          <a href="/status" class="btn btn-ghost" style="padding:14px 28px"><i class="bi bi-activity"></i> Ver Status em Tempo Real</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="fgrid2">
+      <div>
+        <a href="/" class="logo"><img src="/img/dark_logo.png" alt="Atrium Chat">Atrium <strong>Chat</strong></a>
+        <p>Soluções completas em atendimento multicanal, inteligência artificial e controle de SLA em tempo real.</p>
+      </div>
+      <div class="fcol">
+        <h4>Ecossistema</h4>
+        <ul>
+          <li><a href="/#hero">Início</a></li>
+          <li><a href="/#atrium-chat">Atrium Chat</a></li>
+          <li><a href="/#atrium-monitor">Atrium Monitor</a></li>
+          <li><a href="/casos-de-uso">Casos de Uso</a></li>
+          <li><a href="/comparativo">Comparativo Detalhado</a></li>
+          <li><a href="/#planos">Planos & Preços</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h4>Transparência</h4>
+        <ul>
+          <li><a href="/faq">Perguntas Frequentes (FAQ)</a></li>
+          <li><a href="/status">Status dos Serviços (Uptime)</a></li>
+          <li><a href="/changelog">Changelog & Novidades</a></li>
+          <li><a href="/termos">Termos de Uso</a></li>
+          <li><a href="/privacidade">Política de Privacidade</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fbottom">&copy; 2026 Atrium Chat. Operado por Australis DEV (CNPJ: 68.496.294/0001-28). Todos os direitos reservados.</div>
+  </div>
+</footer>
+
+<script src="/js/main.js"></script>
+</body>
+</html>
