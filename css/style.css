@@ -140,6 +140,25 @@ footer{border-top:1px solid var(--border);padding:70px 0 28px;background:#030303
 .fcol a:hover{color:var(--red-hi)}
 .fbottom{border-top:1px solid var(--border);padding-top:26px;text-align:center;font-size:.82rem;color:var(--muted)}
 
+/* =========================================
+   PÁGINAS LEGAIS (Termos / Privacidade)
+========================================= */
+.legal-section{padding:150px 0 100px;min-height:100vh}
+.legal-container{max-width:800px;margin:0 auto;background:var(--card);border:1px solid var(--border);border-radius:16px;padding:48px}
+.legal-container h1{font-size:2.1rem;letter-spacing:-1px;margin-bottom:8px;color:var(--white)}
+.legal-container>p:first-of-type{color:var(--muted);font-size:.92rem;margin-bottom:8px}
+.legal-container h2{font-size:1.15rem;margin-top:34px;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--border);color:var(--white)}
+.legal-container p,.legal-container li{color:var(--gray);font-size:.96rem;line-height:1.7;margin-bottom:14px}
+.legal-container ul{padding-left:20px;margin-bottom:14px}
+.legal-container strong{color:var(--white)}
+.btn-back{display:inline-flex;align-items:center;gap:8px;margin-bottom:32px;color:var(--white);font-weight:500;font-size:.9rem;border:1px solid var(--border);padding:9px 18px;border-radius:8px;transition:var(--ease) .25s}
+.btn-back:hover{border-color:var(--red-hi);background:var(--red-soft);color:var(--red-hi)}
+
+@media(max-width:768px){
+  .legal-container{padding:28px}
+  .legal-section{padding:120px 0 60px}
+}
+
 .fade{opacity:0;transform:translateY(24px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
 .fade.vis{opacity:1;transform:none}
 
