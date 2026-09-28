@@ -258,11 +258,9 @@ document.addEventListener("DOMContentLoaded",function(){
       const agents=parseInt(agentsSlider.value);
       agentsCount.textContent=agents;
 
-      // Atrium pricing: Base R$297 includes up to 10 agents. Extra agents are R$30/mo
       const extraAgents=Math.max(0, agents-10);
       const atriumCost=297 + (extraAgents * 30);
 
-      // Traditional SaaS: Average R$150/user/month (Zendesk, Intercom, Freshdesk standard tiers)
       const marketCost=agents * 150;
       const saved=marketCost - atriumCost;
 
@@ -274,4 +272,10 @@ document.addEventListener("DOMContentLoaded",function(){
     agentsSlider.addEventListener('input', updateCalc);
     updateCalc();
   }
+
+  // Spotlight global seguindo o mouse
+  document.addEventListener('mousemove', e => {
+    document.documentElement.style.setProperty('--spot-x', e.clientX + 'px');
+    document.documentElement.style.setProperty('--spot-y', e.clientY + 'px');
+  });
 });
