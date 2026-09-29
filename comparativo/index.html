@@ -16,7 +16,14 @@
 
 <header id="hdr">
   <div class="hdr-inner">
-    <a href="/" class="logo"><img src="/img/dark_logo.png" alt="Atrium Chat">Atrium <strong>Chat</strong></a>
+    <a href="/" class="logo" aria-label="Atrium Chat">
+      <div class="logo-mark"><img src="/img/dark_logo.png" alt="Atrium Chat Logo"></div>
+      <div class="logo-text">
+        <span class="logo-brand">Atrium</span>
+        <span class="logo-product">Chat</span>
+        <span class="logo-badge">PRO</span>
+      </div>
+    </a>
     <nav class="nav">
       <!-- 1. Dropdown Produto -->
       <div class="nav-item has-dropdown">
@@ -166,183 +173,395 @@
 
   <section class="sec" style="padding-top:0">
     <div class="container">
-      <div class="comp-wrapper">
+      
+      <!-- TOOLBAR INTERATIVA DO COMPARATIVO -->
+      <div class="comp-header-bar fade">
+        <div class="comp-toolbar">
+          <div class="comp-search-wrap">
+            <i class="bi bi-search"></i>
+            <input type="text" id="compSearchInput" class="comp-search-input" placeholder="Pesquise por 'SLA', 'WhatsApp', 'DevOps', 'Preço'..." aria-label="Filtrar recursos do comparativo">
+          </div>
+          
+          <div class="comp-category-chips">
+            <button type="button" class="comp-cat-chip active" data-cat="all">Todos os Recursos</button>
+            <button type="button" class="comp-cat-chip" data-cat="sla">SLA & Auditoria</button>
+            <button type="button" class="comp-cat-chip" data-cat="chat">Multicanal & IA</button>
+            <button type="button" class="comp-cat-chip" data-cat="infra">Infra & DevOps</button>
+            <button type="button" class="comp-cat-chip" data-cat="preco">Custos & Contrato</button>
+          </div>
+        </div>
+
+        <div class="comp-solution-filter">
+          <span class="comp-filter-label"><i class="bi bi-eye"></i> Focar em:</span>
+          <button type="button" class="comp-view-btn active" data-view="all">Todos (Visão Completa)</button>
+          <button type="button" class="comp-view-btn" data-view="zendesk">vs. Zendesk Suite</button>
+          <button type="button" class="comp-view-btn" data-view="chatwoot_cloud">vs. Chatwoot Cloud</button>
+          <button type="button" class="comp-view-btn" data-view="chatwoot_diy">vs. Chatwoot Self-Hosted</button>
+          <button type="button" class="comp-view-btn" data-view="blip_rd">vs. Take Blip / RD</button>
+        </div>
+      </div>
+
+      <div class="comp-wrapper fade">
         <table class="comp-table">
           <thead>
             <tr>
-              <th style="width:34%">Recurso ou Capacidade</th>
-              <th class="col-highlight" style="width:26%">
+              <th class="col-feature">Recurso ou Capacidade</th>
+              <th class="col-highlight">
+                <span class="comp-winner-tag"><i class="bi bi-trophy-fill"></i> Recomendado</span>
                 <div style="font-size:1.15rem;color:var(--white);margin-bottom:2px">Atrium Desk Pro</div>
-                <div style="font-size:.8rem;color:var(--red-hi);font-weight:600">Chat + Monitor + Cloud</div>
+                <div style="font-size:.78rem;color:var(--red-hi);font-weight:600">Chat + Monitor + Cloud</div>
               </th>
-              <th style="width:20%">
-                <div style="font-size:1.05rem;color:var(--white);margin-bottom:2px">Chatwoot Puro</div>
-                <div style="font-size:.8rem;color:var(--muted)">Self-hosted sem gestão</div>
+              <th>
+                <div style="font-size:1.02rem;color:var(--white);margin-bottom:2px">Zendesk Suite</div>
+                <div style="font-size:.78rem;color:var(--muted)">Team / Professional</div>
               </th>
-              <th style="width:20%">
-                <div style="font-size:1.05rem;color:var(--white);margin-bottom:2px">SaaS Tradicionais</div>
-                <div style="font-size:.8rem;color:var(--muted)">Cobrança por atendente</div>
+              <th>
+                <div style="font-size:1.02rem;color:var(--white);margin-bottom:2px">Chatwoot Cloud</div>
+                <div style="font-size:.78rem;color:var(--muted)">Oficial ($39-$99/agente)</div>
+              </th>
+              <th>
+                <div style="font-size:1.02rem;color:var(--white);margin-bottom:2px">Chatwoot Puro DIY</div>
+                <div style="font-size:.78rem;color:var(--muted)">Self-hosted sem gestão</div>
+              </th>
+              <th>
+                <div style="font-size:1.02rem;color:var(--white);margin-bottom:2px">Take Blip / RD</div>
+                <div style="font-size:.78rem;color:var(--muted)">Cobrança por contato/uso</div>
               </th>
             </tr>
           </thead>
           <tbody>
 
-            <!-- GESTÃO OPERACIONAL E SLA -->
-            <tr class="section-title">
-              <th colspan="4"><i class="bi bi-speedometer2"></i> Gestão de SLA & Auditoria Operacional</th>
+            <!-- 1. GESTÃO OPERACIONAL E SLA -->
+            <tr class="section-title" data-category="sla">
+              <th colspan="6"><i class="bi bi-speedometer2"></i> Gestão de SLA & Auditoria Operacional (Atrium Monitor)</th>
             </tr>
-            <tr>
+            <tr data-category="sla">
               <td><strong>Monitoramento de SLA em tempo real</strong><br><small style="color:var(--muted)">Metas de 1ª resposta e resolução por prioridade e canal</small></td>
               <td class="col-highlight"><span class="comp-check"><i class="bi bi-check-circle-fill"></i> Nativo no Atrium Monitor</span></td>
+              <td><span class="comp-warn"><i class="bi bi-exclamation-triangle-fill"></i> Apenas planos caros Enterprise</span></td>
+              <td><span class="comp-warn"><i class="bi bi-exclamation-triangle-fill"></i> Somente Enterprise ($99/mês)</span></td>
               <td><span class="comp-cross"><i class="bi bi-x-circle-fill"></i> Inexistente</span></td>
-              <td><span class="comp-warn"><i class="bi bi-exclamation-triangle-fill"></i> Apenas em planos Enterprise</span></td>
+              <td><span class="comp-warn"><i class="bi bi-dash-circle-fill"></i> Relatórios estáticos</span></td>
             </tr>
-            <tr>
-              <td><strong>Inteligência de Clientes e Risco de Churn</strong><br><small style="color:var(--muted)">Identifica quais clientes estouram SLA com frequência</small></td>
-              <td class="col-highlight"><span class="comp-check"><i class="bi bi-check-circle-fill"></i> Incluso</span></td>
+            <tr data-category="sla">
+              <td><strong>Alertas Proativos de Violação de SLA</strong><br><small style="color:var(--muted)">Notifica gestores antes que o atendimento expire</small></td>
+              <td class="col-highlight"><span class="comp-check"><i class="bi bi-check-circle-fill"></i> Em tempo real no painel</span></td>
+              <td><span class="comp-warn"><i class="bi bi-dash-circle-fill"></i> Requer gatilhos e regras complexas</span></td>
               <td><span class="comp-cross"><i class="bi bi-x-circle-fill"></i> Não possui</span></td>
-              <td><span class="comp-cross"><i class="bi bi-x-circle-fill"></i> Exige ferramenta externa de BI</span></td>
+              <td><span class="comp-cross"><i class="bi bi-x-circle-fill"></i> Inexistente</span></td>
+              <td><span class="comp-warn"><i class="bi bi-dash-circle-fill"></i> Apenas pós-estouro</span></td>
             </tr>
-            <tr>
-              <td><strong>Métricas de desempenho individual por agente</strong><br><small style="color:var(--muted)">Fila pendente, tempo médio de atendimento e carga</small></td>
-              <td class="col-highlight"><span class="comp-check"><i class="bi bi-check-circle-fill"></i> Dashboard completo</span></td>
-              <td><span class="comp-warn"><i class="bi bi-dash-circle-fill"></i> Métricas muito básicas</span></td>
+            <tr data-category="sla">
+              <td><strong>Inteligência de Clientes e Risco de Churn</strong><br><small style="color:var(--muted)">Identifica quais contas acumulam estouros de SLA</small></td>
+              <td class="col-highlight"><span class="comp-check"><i class="bi bi-check-circle-fill"></i> Incluso e automático</span></td>
+              <td><span class="comp-warn"><i class="bi bi-dash-circle-fill"></i> Exige add-on Zendesk Explore Pro</span></td>
+              <td><span class="comp-cross"><i class="bi bi-x-circle-fill"></i> Não possui</span></td>
+              <td><span class="comp-cross"><i class="bi bi-x-circle-fill"></i> Inexistente</span></td>
+              <td><span class="comp-cross"><i class="bi bi-x-circle-fill"></i> Requer export manual</span></td>
+            </tr>
+            <tr data-category="sla">
+              <td><strong>Auditoria de Performance Individual por Agente</strong><br><small style="color:var(--muted)">Fila pendente, TMA, TMR e tempo de ociosidade</small></td>
+              <td class="col-highlight"><span class="comp-check"><i class="bi bi-check-circle-fill"></i> Dashboard completo live</span></td>
+              <td><span class="comp-check"><i class="bi bi-check-circle-fill"></i> Incluso no Suite</span></td>
+              <td><span class="comp-warn"><i class="bi bi-dash-circle-fill"></i> Métricas resumidas</span></td>
+              <td><span class="comp-warn"><i class="bi bi-dash-circle-fill"></i> Relatório muito básico</span></td>
               <td><span class="comp-check"><i class="bi bi-check-circle-fill"></i> Incluso</span></td>
             </tr>
-            <tr>
-              <td><strong>Análise de picos operacionais por horário</strong><br><small style="color:var(--muted)">Planejamento de escala de atendentes baseado em dados</small></td>
+            <tr data-category="sla">
+              <td><strong>Mapa de Calor de Horários de Pico</strong><br><small style="color:var(--muted)">Dimensionamento preciso de escala de atendentes</small></td>
               <td class="col-highlight"><span class="comp-check"><i class="bi bi-check-circle-fill"></i> Visual & Exportável</span></td>
+              <td><span class="comp-check"><i class="bi bi-check-circle-fill"></i> Incluso</span></td>
               <td><span class="comp-cross"><i class="bi bi-x-circle-fill"></i> Não possui</span></td>
-              <td><span class="comp-check"><i class="bi bi-check-circle-fill"></i> Incluso</span></td>
+              <td><span class="comp-cross"><i class="bi bi-x-circle-fill"></i> Não possui</span></td>
+              <td><span class="comp-warn"><i class="bi bi-dash-circle-fill"></i> Parcial</span></td>
             </tr>
 
-            <!-- ATENDIMENTO & IA -->
-            <tr class="section-title">
-              <th colspan="4"><i class="bi bi-chat-dots-fill"></i> Caixa de Entrada Omnichannel & IA</th>
+            <!-- 2. ATENDIMENTO MULTICANAL E IA -->
+            <tr class="section-title" data-category="chat">
+              <th colspan="6"><i class="bi bi-chat-dots-fill"></i> Atendimento Multicanal & Inteligência Artificial (Atrium Chat)</th>
             </tr>
-            <tr>
-              <td><strong>WhatsApp Multi-atendente com 1 ou 2 números</strong><br><small style="color:var(--muted)">Distribuição de chamados sem derrubar conexões</small></td>
+            <tr data-category="chat">
+              <td><strong>WhatsApp Multi-atendente Estável</strong><br><small style="color:var(--muted)">Distribuição de chamados sem quedas de conexão</small></td>
               <td class="col-highlight"><span class="comp-check"><i class="bi bi-check-circle-fill"></i> 2 conexões inclusas</span></td>
-              <td><span class="comp-warn"><i class="bi bi-dash-circle-fill"></i> Requer configuração manual</span></td>
-              <td><span class="comp-warn"><i class="bi bi-exclamation-triangle-fill"></i> Cobrado à parte por mensagem/canal</span></td>
+              <td><span class="comp-warn"><i class="bi bi-exclamation-triangle-fill"></i> Cobrado por canal/parceiro BSP</span></td>
+              <td><span class="comp-warn"><i class="bi bi-dash-circle-fill"></i> Requer provedor externo</span></td>
+              <td><span class="comp-warn"><i class="bi bi-exclamation-triangle-fill"></i> Requer config manual arriscada</span></td>
+              <td><span class="comp-warn"><i class="bi bi-exclamation-triangle-fill"></i> Taxa alta de ativação + créditos</span></td>
             </tr>
-            <tr>
-              <td><strong>Copiloto de IA nativo</strong><br><small style="color:var(--muted)">Resumo de conversas longas e ajuste de tom profissional</small></td>
-              <td class="col-highlight"><span class="comp-check"><i class="bi bi-check-circle-fill"></i> Pronto para uso</span></td>
-              <td><span class="comp-warn"><i class="bi bi-dash-circle-fill"></i> Requer chave de API e config técnica</span></td>
-              <td><span class="comp-warn"><i class="bi bi-exclamation-triangle-fill"></i> Cobrado como add-on caro em dólar</span></td>
+            <tr data-category="chat">
+              <td><strong>Copiloto de IA Nativo (Resumos e Tom)</strong><br><small style="color:var(--muted)">Resume conversas na transferência e refina mensagens</small></td>
+              <td class="col-highlight"><span class="comp-check"><i class="bi bi-check-circle-fill"></i> Pronto para uso sem setup</span></td>
+              <td><span class="comp-warn"><i class="bi bi-exclamation-triangle-fill"></i> +$50/agente/mês (Copilot add-on)</span></td>
+              <td><span class="comp-warn"><i class="bi bi-dash-circle-fill"></i> Franquia Captain AI com cobrança</span></td>
+              <td><span class="comp-warn"><i class="bi bi-dash-circle-fill"></i> Exige chave de API e infra própria</span></td>
+              <td><span class="comp-warn"><i class="bi bi-exclamation-triangle-fill"></i> Cobrado por pacote/resolução</span></td>
             </tr>
-            <tr>
-              <td><strong>Gestão Visual Kanban & Etiquetas</strong><br><small style="color:var(--muted)">Organização de status de atendimento por colunas</small></td>
-              <td class="col-highlight"><span class="comp-check"><i class="bi bi-check-circle-fill"></i> Integrado</span></td>
+            <tr data-category="chat">
+              <td><strong>Gestão Visual Tipo Kanban</strong><br><small style="color:var(--muted)">Organização de atendimentos por colunas de status</small></td>
+              <td class="col-highlight"><span class="comp-check"><i class="bi bi-check-circle-fill"></i> Integrado nativamente</span></td>
+              <td><span class="comp-warn"><i class="bi bi-dash-circle-fill"></i> Requer apps terceiros na loja</span></td>
+              <td><span class="comp-check"><i class="bi bi-check-circle-fill"></i> Incluso</span></td>
               <td><span class="comp-check"><i class="bi bi-check-circle-fill"></i> Presente</span></td>
-              <td><span class="comp-warn"><i class="bi bi-dash-circle-fill"></i> Varia por plano</span></td>
+              <td><span class="comp-warn"><i class="bi bi-dash-circle-fill"></i> Parcial</span></td>
+            </tr>
+            <tr data-category="chat">
+              <td><strong>Caixa Unificada Omnichannel</strong><br><small style="color:var(--muted)">WhatsApp, E-mail, Chat Web e Redes em uma só tela</small></td>
+              <td class="col-highlight"><span class="comp-check"><i class="bi bi-check-circle-fill"></i> Centralizado</span></td>
+              <td><span class="comp-check"><i class="bi bi-check-circle-fill"></i> Centralizado</span></td>
+              <td><span class="comp-check"><i class="bi bi-check-circle-fill"></i> Centralizado</span></td>
+              <td><span class="comp-check"><i class="bi bi-check-circle-fill"></i> Centralizado</span></td>
+              <td><span class="comp-check"><i class="bi bi-check-circle-fill"></i> Centralizado</span></td>
             </tr>
 
-            <!-- INFRAESTRUTURA & SUPORTE -->
-            <tr class="section-title">
-              <th colspan="4"><i class="bi bi-hdd-rack-fill"></i> Infraestrutura, DevOps & Manutenção</th>
+            <!-- 3. INFRAESTRUTURA E SUPORTE -->
+            <tr class="section-title" data-category="infra">
+              <th colspan="6"><i class="bi bi-hdd-rack-fill"></i> Infraestrutura, Nuvem & Suporte Técnico</th>
             </tr>
-            <tr>
-              <td><strong>Nuvem gerenciada & isolada (sem dor de DevOps)</strong><br><small style="color:var(--muted)">Servidores rápidos, SSL automático e proxy reverso</small></td>
+            <tr data-category="infra">
+              <td><strong>Nuvem Gerenciada & Isolada (Zero DevOps)</strong><br><small style="color:var(--muted)">Servidores de alta velocidade, SSL e proxy cuidada por nós</small></td>
               <td class="col-highlight"><span class="comp-check"><i class="bi bi-check-circle-fill"></i> 100% Cuidado por nós</span></td>
+              <td><span class="comp-check"><i class="bi bi-check-circle-fill"></i> Nuvem corporativa</span></td>
+              <td><span class="comp-check"><i class="bi bi-check-circle-fill"></i> Nuvem nos EUA/Europa</span></td>
               <td><span class="comp-cross"><i class="bi bi-x-circle-fill"></i> Você precisa manter o servidor</span></td>
+              <td><span class="comp-check"><i class="bi bi-check-circle-fill"></i> Nuvem gerenciada</span></td>
+            </tr>
+            <tr data-category="infra">
+              <td><strong>Backups Automáticos Diários Homologados</strong><br><small style="color:var(--muted)">Proteção total contra corrupção e perda de histórico</small></td>
+              <td class="col-highlight"><span class="comp-check"><i class="bi bi-check-circle-fill"></i> Rotina automática diária</span></td>
+              <td><span class="comp-check"><i class="bi bi-check-circle-fill"></i> Incluso</span></td>
+              <td><span class="comp-check"><i class="bi bi-check-circle-fill"></i> Incluso</span></td>
+              <td><span class="comp-cross"><i class="bi bi-x-circle-fill"></i> Risco de perda se não configurar</span></td>
               <td><span class="comp-check"><i class="bi bi-check-circle-fill"></i> Incluso</span></td>
             </tr>
-            <tr>
-              <td><strong>Backups diários e atualizações sem quebras</strong><br><small style="color:var(--muted)">Updates de segurança e do ecossistema homologados</small></td>
-              <td class="col-highlight"><span class="comp-check"><i class="bi bi-check-circle-fill"></i> Rotina automática</span></td>
-              <td><span class="comp-cross"><i class="bi bi-x-circle-fill"></i> Risco alto de crash em updates</span></td>
-              <td><span class="comp-check"><i class="bi bi-check-circle-fill"></i> Incluso</span></td>
+            <tr data-category="infra">
+              <td><strong>Atualizações de Segurança sem Quebras</strong><br><small style="color:var(--muted)">Engenharia especializada testa cada release antes de subir</small></td>
+              <td class="col-highlight"><span class="comp-check"><i class="bi bi-check-circle-fill"></i> Testadas e homologadas</span></td>
+              <td><span class="comp-check"><i class="bi bi-check-circle-fill"></i> Automáticas</span></td>
+              <td><span class="comp-check"><i class="bi bi-check-circle-fill"></i> Automáticas</span></td>
+              <td><span class="comp-cross"><i class="bi bi-x-circle-fill"></i> Alto risco de quebra de banco</span></td>
+              <td><span class="comp-check"><i class="bi bi-check-circle-fill"></i> Automáticas</span></td>
             </tr>
-            <tr>
-              <td><strong>Suporte técnico humanizado no Brasil (WhatsApp + E-mail)</strong><br><small style="color:var(--muted)">Atendimento rápido na sua língua e no seu fuso horário</small></td>
+            <tr data-category="infra">
+              <td><strong>Suporte Técnico em Português no Brasil</strong><br><small style="color:var(--muted)">Atendimento rápido via WhatsApp e E-mail no seu fuso</small></td>
               <td class="col-highlight"><span class="comp-check"><i class="bi bi-check-circle-fill"></i> Direto com engenharia</span></td>
-              <td><span class="comp-cross"><i class="bi bi-x-circle-fill"></i> Sem suporte (depende do GitHub)</span></td>
-              <td><span class="comp-warn"><i class="bi bi-exclamation-triangle-fill"></i> Em inglês ou tickets demorados</span></td>
+              <td><span class="comp-warn"><i class="bi bi-dash-circle-fill"></i> Suporte lento em tickets/inglês</span></td>
+              <td><span class="comp-warn"><i class="bi bi-dash-circle-fill"></i> Em inglês nos EUA</span></td>
+              <td><span class="comp-cross"><i class="bi bi-x-circle-fill"></i> Nenhum (apenas fórum GitHub)</span></td>
+              <td><span class="comp-warn"><i class="bi bi-dash-circle-fill"></i> Fila comercial / chamados</span></td>
             </tr>
-            <tr>
-              <td><strong>Treinamento de equipe no Onboarding</strong><br><small style="color:var(--muted)">Capacitação da sua liderança e operadores na implantação</small></td>
-              <td class="col-highlight"><span class="comp-check"><i class="bi bi-check-circle-fill"></i> Incluso no Setup</span></td>
+            <tr data-category="infra">
+              <td><strong>Treinamento e Setup Humanizado</strong><br><small style="color:var(--muted)">Capacitação da sua liderança e operadores na implantação</small></td>
+              <td class="col-highlight"><span class="comp-check"><i class="bi bi-check-circle-fill"></i> Incluso na taxa de Setup</span></td>
+              <td><span class="comp-warn"><i class="bi bi-exclamation-triangle-fill"></i> Consultorias caras à parte</span></td>
+              <td><span class="comp-cross"><i class="bi bi-x-circle-fill"></i> Self-service sem suporte humano</span></td>
               <td><span class="comp-cross"><i class="bi bi-x-circle-fill"></i> Inexistente</span></td>
-              <td><span class="comp-warn"><i class="bi bi-exclamation-triangle-fill"></i> Consultoria cobrada à parte</span></td>
+              <td><span class="comp-warn"><i class="bi bi-dash-circle-fill"></i> Restrito a contratos grandes</span></td>
             </tr>
 
-            <!-- MODELO COMERCIAL -->
-            <tr class="section-title">
-              <th colspan="4"><i class="bi bi-currency-dollar"></i> Previsibilidade Financeira</th>
+            <!-- 4. CUSTOS E MODELO COMERCIAL -->
+            <tr class="section-title" data-category="preco">
+              <th colspan="6"><i class="bi bi-currency-dollar"></i> Previsibilidade Financeira & Licenciamento</th>
             </tr>
-            <tr>
-              <td><strong>Preço para equipe de até 10 atendentes</strong></td>
+            <tr data-category="preco">
+              <td><strong>Custo para equipe de 10 atendentes</strong></td>
               <td class="col-highlight">
                 <span class="comp-pill green">R$ 297/mês total</span><br>
-                <small style="color:#86efac;font-weight:500">Apenas R$ 29,70 por atendente</small>
+                <small style="color:#86efac;font-weight:600">R$ 29,70 por atendente</small>
               </td>
               <td>
-                <span class="comp-pill yellow">R$ 150 a R$ 350/mês</span><br>
-                <small style="color:var(--muted)">Custo de VPS + DevOps</small>
+                <span class="comp-pill red">R$ 3.590 a R$ 7.550/mês</span><br>
+                <small style="color:var(--muted)">R$ 359-755/agente anual</small>
               </td>
               <td>
-                <span class="comp-pill red">R$ 1.500 a R$ 3.000/mês</span><br>
-                <small style="color:var(--muted)">Cobrança de R$ 150-300/usuário</small>
+                <span class="comp-pill red">~R$ 2.250/mês ($390)</span><br>
+                <small style="color:var(--muted)">Cobrado em dólar + IOF</small>
+              </td>
+              <td>
+                <span class="comp-pill yellow">R$ 2.080/mês</span><br>
+                <small style="color:var(--muted)">VPS (R$ 280) + DevOps (R$ 1.800)</small>
+              </td>
+              <td>
+                <span class="comp-pill red">R$ 1.199 a R$ 2.699/mês</span><br>
+                <small style="color:var(--muted)">Mais taxas por mensagem</small>
               </td>
             </tr>
-            <tr>
-              <td><strong>Custo por atendente adicional</strong></td>
+            <tr data-category="preco">
+              <td><strong>Custo por Atendente Adicional</strong></td>
               <td class="col-highlight"><span class="comp-pill green">+ R$ 30/mês</span></td>
+              <td><span class="comp-pill red">+ R$ 359 a R$ 755/mês</span></td>
+              <td><span class="comp-pill red">+ $39 USD (~R$ 225/mês)</span></td>
               <td><span class="comp-pill yellow">Escala o servidor VPS</span></td>
-              <td><span class="comp-pill red">+ R$ 150 a R$ 300/mês</span></td>
+              <td><span class="comp-pill red">+ R$ 200/mês</span></td>
             </tr>
-            <tr>
-              <td><strong>Fidelidade ou contrato de permanência</strong></td>
+            <tr data-category="preco">
+              <td><strong>Fidelidade e Multas de Cancelamento</strong></td>
               <td class="col-highlight"><span class="comp-check"><i class="bi bi-shield-check"></i> Sem fidelidade</span></td>
-              <td><span class="comp-check"><i class="bi bi-shield-check"></i> Sem fidelidade</span></td>
               <td><span class="comp-warn"><i class="bi bi-exclamation-triangle-fill"></i> Contratos anuais travados</span></td>
+              <td><span class="comp-check"><i class="bi bi-check-circle-fill"></i> Mensal ou anual</span></td>
+              <td><span class="comp-check"><i class="bi bi-check-circle-fill"></i> Sem fidelidade</span></td>
+              <td><span class="comp-warn"><i class="bi bi-exclamation-triangle-fill"></i> Contratos anuais padrão</span></td>
+            </tr>
+            <tr data-category="preco">
+              <td><strong>Cobrança de WhatsApp e Mensagens</strong></td>
+              <td class="col-highlight"><span class="comp-check"><i class="bi bi-check-circle-fill"></i> 2 conexões inclusas sem taxa</span></td>
+              <td><span class="comp-warn"><i class="bi bi-exclamation-triangle-fill"></i> Add-on por agente/parceiro</span></td>
+              <td><span class="comp-warn"><i class="bi bi-dash-circle-fill"></i> Cobrado pelo provedor</span></td>
+              <td><span class="comp-check"><i class="bi bi-check-circle-fill"></i> Grátis via API configurada</span></td>
+              <td><span class="comp-warn"><i class="bi bi-exclamation-triangle-fill"></i> Carteira pré-paga por envio</span></td>
             </tr>
 
           </tbody>
         </table>
+
+        <div id="compEmptyState" class="comp-empty-state">
+          <i class="bi bi-search" style="font-size:2rem;margin-bottom:12px;display:block"></i>
+          Nenhum recurso encontrado com o termo pesquisado. Tente pesquisar por 'SLA', 'WhatsApp', 'DevOps' ou 'Preço'.
+        </div>
       </div>
 
-      <!-- CALCULADORA DE ECONOMIA -->
-      <div class="calc-card fade">
-        <div style="text-align:center;max-width:600px;margin:0 auto 30px">
-          <span class="eyebrow"><i class="bi bi-calculator-fill"></i> Simulador Interativo</span>
+      <!-- CALCULADORA DE ECONOMIA REAL MULTI-SOLUÇÃO -->
+      <div class="calc-box fade">
+        <div style="text-align:center;max-width:680px;margin:0 auto 30px">
+          <span class="eyebrow"><i class="bi bi-calculator-fill"></i> Simulador Interativo de Economia</span>
           <h2 style="font-size:2rem;margin-bottom:8px">Calcule a sua economia real</h2>
-          <p style="font-size:.95rem">Compare o custo do Atrium Desk com as plataformas SaaS que cobram por assento de atendente conforme a sua equipe escala.</p>
+          <p style="font-size:.95rem">Compare o investimento do Atrium Desk com as soluções que cobram preços exorbitantes por assento conforme sua equipe cresce.</p>
         </div>
 
-        <div class="calc-grid">
-          <div class="calc-slider-wrap">
-            <label for="agentsSlider">
-              <span>Tamanho da sua equipe de atendimento:</span>
-              <span style="font-size:1.4rem;color:var(--red-hi);font-weight:800"><span id="agentsCount">10</span> atendentes</span>
-            </label>
-            <input type="range" id="agentsSlider" class="calc-slider" min="3" max="40" value="10" step="1">
-            <div style="display:flex;justify-content:space-between;color:var(--muted);font-size:.8rem;margin-top:8px">
-              <span>3 atendentes</span>
-              <span>10 (base inclusa)</span>
-              <span>25</span>
-              <span>40 atendentes</span>
+        <!-- Seletor de Concorrente -->
+        <div class="calc-competitors-bar">
+          <span class="calc-label-title"><i class="bi bi-sliders"></i> Selecione o concorrente para comparar:</span>
+          <div class="calc-comp-chips">
+            <button type="button" class="calc-chip active" data-competitor="zendesk">
+              <span class="chip-name">Zendesk Suite</span>
+              <span class="chip-price">R$ 359/agente/mês</span>
+            </button>
+            <button type="button" class="calc-chip" data-competitor="chatwoot_cloud">
+              <span class="chip-name">Chatwoot Cloud</span>
+              <span class="chip-price">~R$ 225/agente ($39)</span>
+            </button>
+            <button type="button" class="calc-chip" data-competitor="blip">
+              <span class="chip-name">Take Blip (Desk)</span>
+              <span class="chip-price">R$ 1.199 + R$ 200/agente</span>
+            </button>
+            <button type="button" class="calc-chip" data-competitor="rd">
+              <span class="chip-name">RD Station Conversas</span>
+              <span class="chip-price">R$ 989 a R$ 2.699</span>
+            </button>
+            <button type="button" class="calc-chip" data-competitor="saas_tradicional">
+              <span class="chip-name">SaaS Tradicionais</span>
+              <span class="chip-price">Média R$ 170/agente</span>
+            </button>
+            <button type="button" class="calc-chip" data-competitor="diy">
+              <span class="chip-name">Self-Hosted Puro (DIY)</span>
+              <span class="chip-price">VPS + R$ 1.800 DevOps</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="calc-grid-v2">
+          <!-- Coluna de Controles / Inputs -->
+          <div class="calc-inputs-col">
+            <!-- Slider Atendentes -->
+            <div class="calc-slider-card">
+              <div class="slider-header">
+                <label for="calcAgentsSliderComp">Tamanho da sua equipe de atendimento:</label>
+                <div class="slider-val-badge"><span class="calc-agents-count">10</span> atendentes</div>
+              </div>
+              <input type="range" id="calcAgentsSliderComp" class="calc-slider calc-agents-slider" min="3" max="50" value="10" step="1" aria-label="Quantidade de atendentes">
+              <div class="slider-ticks">
+                <span>3</span>
+                <span class="tick-highlight">10 (base inclusa)</span>
+                <span>20</span>
+                <span>35</span>
+                <span>50 atendentes</span>
+              </div>
+              
+              <div class="calc-presets">
+                <span class="preset-label">Tamanhos comuns:</span>
+                <button type="button" class="btn-preset" data-agents="5">5 agentes</button>
+                <button type="button" class="btn-preset active" data-agents="10">10 agentes</button>
+                <button type="button" class="btn-preset" data-agents="20">20 agentes</button>
+                <button type="button" class="btn-preset" data-agents="35">35 agentes</button>
+              </div>
             </div>
 
-            <div style="margin-top:28px;background:rgba(255,255,255,.03);padding:18px;border-radius:12px;border:1px solid var(--border)">
-              <div style="display:flex;justify-content:space-between;margin-bottom:10px;font-size:.92rem">
-                <span>Plataformas tradicionais (média R$ 150/agente):</span>
-                <strong id="marketTotal" style="color:#f87171">R$ 1.500</strong>
+            <!-- Slider WhatsApp -->
+            <div class="calc-slider-card">
+              <div class="slider-header">
+                <label for="calcWhatsSliderComp">Números de WhatsApp conectados:</label>
+                <div class="slider-val-badge"><span class="calc-whats-count">2</span> linhas</div>
               </div>
-              <div style="display:flex;justify-content:space-between;font-size:.92rem">
-                <span>Atrium Desk Pro (R$ 297 + excedente):</span>
-                <strong id="atriumTotal" style="color:var(--white)">R$ 297</strong>
+              <input type="range" id="calcWhatsSliderComp" class="calc-slider calc-whats-slider" min="1" max="10" value="2" step="1" aria-label="Quantidade de números de WhatsApp">
+              <div class="slider-ticks">
+                <span>1 linha</span>
+                <span class="tick-highlight">2 (inclusas no Pro)</span>
+                <span>5 linhas</span>
+                <span>10 linhas</span>
+              </div>
+            </div>
+
+            <!-- Alternador Mensal / Anual -->
+            <div class="calc-period-toggle">
+              <span class="toggle-text">Período de visualização:</span>
+              <div class="period-switcher">
+                <button type="button" class="period-btn active" data-period="monthly">Mensal</button>
+                <button type="button" class="period-btn" data-period="annual">Anual (12 Meses)</button>
+              </div>
+            </div>
+
+            <!-- Nota metodológica transparente -->
+            <div class="calc-methodology-note">
+              <i class="bi bi-info-circle-fill"></i>
+              <div>
+                <strong class="calc-note-title">Metodologia Zendesk Suite (Team / Pro):</strong>
+                <span class="calc-note-text">Baseado no plano Zendesk Suite Team oficial (R$ 359/agente/mês faturado anualmente) com 1 canal WhatsApp incluso. Linhas adicionais de WhatsApp demandam add-ons/parceiros BSP (~R$ 120/linha) e créditos de IA por resolução excedente.</span>
               </div>
             </div>
           </div>
 
-          <div class="calc-result-box">
-            <span style="font-size:.85rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted)">Sua economia estimada</span>
-            <div class="calc-diff" id="savingsTotal">R$ 1.203/mês</div>
-            <p style="font-size:.88rem;color:var(--gray);margin-bottom:20px">Economia direta reinvestida na expansão do seu time de vendas e suporte, com todos os recursos de SLA e IA inclusos.</p>
-            <a href="/#agendar" class="btn btn-primary" style="width:100%">Agendar Demonstração Gratuita <i class="bi bi-arrow-right"></i></a>
+          <!-- Coluna de Resultados / Economia -->
+          <div class="calc-results-col">
+            <div class="calc-cost-cards">
+              <!-- Card Concorrente -->
+              <div class="cost-summary-card comp-card">
+                <div class="cost-card-header">
+                  <span class="cost-name calc-comp-display-name">Zendesk Suite</span>
+                  <span class="cost-tag red">Custo Estimado</span>
+                </div>
+                <div class="cost-value calc-comp-cost">R$ 4.040<span class="period-sub">/mês</span></div>
+                <div class="cost-breakdown calc-comp-breakdown">10 agentes (R$ 359/mês) + linhas extras e IA</div>
+              </div>
+
+              <!-- Card Atrium Desk Pro -->
+              <div class="cost-summary-card atrium-card">
+                <div class="cost-card-header">
+                  <span class="cost-name">Atrium Desk Pro</span>
+                  <span class="cost-tag green">Plano Completo</span>
+                </div>
+                <div class="cost-value calc-atrium-cost">R$ 297<span class="period-sub">/mês</span></div>
+                <div class="cost-breakdown calc-atrium-breakdown">Plano Pro R$ 297 (10 inclusos)</div>
+              </div>
+            </div>
+
+            <!-- Caixa de Destaque da Economia -->
+            <div class="calc-savings-box">
+              <div class="savings-glow"></div>
+              <div class="savings-header">
+                <span class="savings-eyebrow"><i class="bi bi-piggy-bank-fill"></i> Economia Líquida Estimada</span>
+                <span class="savings-pct-badge calc-savings-pct">-92%</span>
+              </div>
+              <div class="savings-amount calc-savings-amount">R$ 3.743<span class="savings-sub">/mês</span></div>
+              <div class="savings-annual-box">
+                <span>Economia acumulada em 1 ano:</span>
+                <strong class="calc-annual-savings">R$ 44.916 / ano</strong>
+              </div>
+              <p class="savings-impact calc-savings-impact">
+                Uma economia direta de <strong>R$ 44.916 por ano</strong> no seu caixa. Isso equivale a contratar <strong>+1.5 novos atendentes</strong> ou investir pesado em tráfego para atrair mais clientes.
+              </p>
+              <div class="savings-cta">
+                <a href="/#agendar" class="btn btn-primary btn-block">Agendar Demonstração & Travar Valores <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -367,7 +586,14 @@
   <div class="container">
     <div class="fgrid2">
       <div>
-        <a href="/" class="logo"><img src="/img/dark_logo.png" alt="Atrium Chat">Atrium <strong>Chat</strong></a>
+        <a href="/" class="logo" aria-label="Atrium Chat">
+          <div class="logo-mark"><img src="/img/dark_logo.png" alt="Atrium Chat Logo"></div>
+          <div class="logo-text">
+            <span class="logo-brand">Atrium</span>
+            <span class="logo-product">Chat</span>
+            <span class="logo-badge">PRO</span>
+          </div>
+        </a>
         <p>Soluções completas em atendimento multicanal, inteligência artificial e controle de SLA em tempo real.</p>
       </div>
       <div class="fcol">
