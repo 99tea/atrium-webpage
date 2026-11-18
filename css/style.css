@@ -79,18 +79,6 @@ button{font-family:var(--font)}
 .hero h1{font-size:2.6rem;letter-spacing:-1.2px;margin-bottom:16px;line-height:1.12}
 .hero p{font-size:1rem;max-width:460px;margin-bottom:24px}
 .hero-actions{display:flex;gap:14px;margin-bottom:24px;flex-wrap:wrap}
-.hero-stats{display:flex;gap:28px;padding-top:16px;border-top:1px solid var(--border)}
-.hs{display:flex;flex-direction:column}
-.hs .n{font-size:1.35rem;font-weight:800;color:var(--white)}
-.hs .l{font-size:.8rem;color:var(--muted)}
-
-.hero-visual{position:relative;overflow:visible}
-.hero-mockup-wrapper{position:relative;width:108%;max-width:none;margin-left:2%;perspective:1200px}
-.hero-mockup-glow{position:absolute;inset:0;background:
-    radial-gradient(ellipse 55% 90% at 0% 50%, rgba(194,33,40,.55), transparent 70%),
-    radial-gradient(ellipse 55% 90% at 100% 50%, rgba(194,69,31,.4), transparent 70%),
-    radial-gradient(ellipse 90% 40% at 50% 100%, rgba(194,33,40,.35), transparent 70%);
-  filter:blur(50px);z-index:0;pointer-events:none;animation:pulse 4s ease-in-out infinite}
 .hero-mockup-img{position:relative;z-index:1;width:100%;height:auto;border-radius:14px;box-shadow:0 30px 70px -15px rgba(0,0,0,.85);border:1px solid rgba(255,255,255,.08);transition:transform .4s var(--ease);display:block}
 .hero-mockup-wrapper:hover .hero-mockup-img{transform:translateY(-6px)}
 .mockup-float-badge{position:absolute;display:inline-flex;align-items:center;gap:12px;background:rgba(12,12,14,.92);backdrop-filter:blur(14px);border:1px solid var(--border-hi);padding:10px 16px;border-radius:14px;box-shadow:0 14px 34px rgba(0,0,0,.7);z-index:2;animation:floatSlow 4s ease-in-out infinite}
